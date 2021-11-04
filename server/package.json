@@ -1,0 +1,17 @@
+{
+  "name": "nodejsvideostreamingapp",
+  "version": "1.0.0",
+  "description": "this is a nodejs video streamming web app. in this you can upload and stram video online.",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "video",
+    "stream",
+    "nodejs",
+    "streaming"
+  ],
+  "author": "nazrul islam",
+  "license": "MIT"
+}
