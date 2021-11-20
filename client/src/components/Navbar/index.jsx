@@ -1,12 +1,19 @@
 import React from 'react'
 import {Nav,Menu,Navul,Navitem,Logo,SearchDiv,UserImg} from './NavbarStyle';
-import userimg from '../../Image/unnamed.jpg'
-const Navbar = () => {
+import userimg from '../../Image/unnamed.jpg';
+import ModalContext from '../../ModalContaxt/modalContext'
+import { useState,useContext,useEffect } from 'react';
+const Navbar = ({toggle}) => {
+    const context = useContext(ModalContext); 
+    const {open,handleOpen} = context;
+    useEffect(() => {
+      console.log(open)
+    }, [])
     return (
         <>
         <Nav>
 
-            <Menu><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 0 26 26" width="26px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></Menu>
+            <Menu><svg onClick={()=>toggle()} xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 0 26 26" width="26px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></Menu>
             <Logo>iTube</Logo>
 <SearchDiv>
     <input type="text" placeholder="Search" />
@@ -15,14 +22,14 @@ const Navbar = () => {
 
 <Navul>
     <Navitem>Login</Navitem>
-    <Navitem>Signup</Navitem>
+    <Navitem onClick={()=>handleOpen()}>Signup</Navitem>
 </Navul>
 
 <UserImg>
     <img src={userimg} alt="userimage" />
 </UserImg>
         </Nav>
-            
+
         </>
     )
 }

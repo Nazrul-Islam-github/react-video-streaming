@@ -6,6 +6,10 @@ width:100%;
 display: flex;
 border-bottom: 1px solid #aaa;
 align-items: center;
+position: sticky;
+top: 0%;
+background-color: #fff;
+z-index: 2;
 
 `;
 
@@ -23,6 +27,10 @@ padding: 0 12px 0px 15px;
 color: #000;
 width: 20%;
 font-weight: bold;
+@media screen and (max-width:573px)
+{
+    width : 15%
+}
 
 `;
 export const Navul = styled.ul`
@@ -31,18 +39,33 @@ list-style: none;
 width: 30%;
 /* border: 2px solid red; */
 height: 100%;
+/* border: 1px solid red; */
 align-items: center;
 justify-content:right;
+
+@media screen and (max-width:803px) {
+    width:20%;
+    justify-content: space-around;
+}
+
+
+
+
 `;
 export const Navitem = styled.li`
 margin-left: 2rem;
 font-family: 'Ubuntu', sans-serif;
 font-size: 18px;
 cursor: pointer;
+@media screen and (max-width:683px) {
+   margin-left: 1rem;
+}
 transition: all .3s linear;
 &:hover{
     color: rgba(0, 0, 0, 0.6);;
 }
+
+
 `;
 
 
@@ -63,6 +86,17 @@ input{
     &:focus{
         border: 2px solid #065fd4;
     }
+    @media screen and (max-width:1145px) {
+    width: 220px;
+}
+
+@media screen and (max-width:699px){
+    width: 150px;
+}
+
+@media screen and (max-width:521px){
+    width: 100px;
+}
 }
 
 button{
@@ -91,5 +125,9 @@ img{
     border-radius: 50%;
     cursor: pointer;
     margin-left: 2rem;
+
+    @media screen and (max-width:521px){
+    
+}
 }
 `;

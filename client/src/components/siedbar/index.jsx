@@ -1,16 +1,17 @@
 import React from 'react'
 import { Main,Logo } from './SideBarStyle.js';
-const SideBar = () => {
+import {Home,Music,Like,Later,History} from '../Icon/index'
+const SideBar = ({toggleSideNav}) => {
     return (
        <>
-       <Main>
+       <Main toggleSideNav={toggleSideNav}>
 
            <ul>
-               <li>Home</li>
-               <li>Music</li>
-               <li>Trailer</li>
-               <li>Watch Leter</li>
-               <li>History</li>
+              <li><span><Home/> Home</span></li>
+               <li><span><Music/>Music</span></li>
+               <li><span><Like/>Like Videos</span></li>
+               <li><span><Later/>Watch Leter</span></li>
+               <li><span><History/>History</span></li>
            </ul>
        </Main>
        
