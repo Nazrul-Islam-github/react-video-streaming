@@ -2,7 +2,7 @@ import React from 'react'
 import {Nav,Menu,Navul,Navitem,Logo,SearchDiv,UserImg} from './NavbarStyle';
 import userimg from '../../Image/unnamed.jpg';
 import ModalContext from '../../ModalContaxt/modalContext'
-import { useState,useContext,useEffect } from 'react';
+import {useContext,useEffect } from 'react';
 const Navbar = ({toggle}) => {
     const context = useContext(ModalContext); 
     const {open,handleOpen} = context;
@@ -21,12 +21,13 @@ const Navbar = ({toggle}) => {
 </SearchDiv>
 
 <Navul>
-    <Navitem>Login</Navitem>
-    <Navitem onClick={()=>handleOpen()}>Signup</Navitem>
+    {/* <Navitem>Login</Navitem>
+    <Navitem onClick={()=>handleOpen()}>Signup</Navitem> */}
+    <Navitem onClick={()=>handleOpen()}>Signout</Navitem>
 </Navul>
 
 <UserImg>
-    <img src={userimg} alt="userimage" />
+    {/* <img src={userimg} alt="userimage" /> */}
 </UserImg>
         </Nav>
 

@@ -5,7 +5,7 @@ width:200px;
 min-height: 100vh;
 max-height: 100vh;
 background-color: #fff;
-border: 1px solid red;
+/* border: 1px solid red; */
 color: rgb(26, 29, 32);
 transition: all .3s linear;
 position: absolute;
@@ -42,6 +42,7 @@ ul{
        span{
         display: flex;
         align-items: center;
+        color: rgb(26, 29, 32);
         margin-left: 1rem;
         @media screen and (max-width:439px){
             margin-left: 0rem;
@@ -56,6 +57,9 @@ ul{
         transition: all .3s linear;
         &:hover{
             background-color: rgb(214, 216, 218);;
+        }
+        a{
+            text-decoration: none;
         }
     }
 }

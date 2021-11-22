@@ -4,7 +4,7 @@
   "description": "this is a nodejs video streamming web app. in this you can upload and stram video online.",
   "main": "sever.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server.js"
   },
   "keywords": [
     "video",
@@ -13,5 +13,10 @@
     "streaming"
   ],
   "author": "nazrul islam",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "thumbsupply": "^0.4.0"
+  }
 }
